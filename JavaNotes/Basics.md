@@ -62,10 +62,11 @@ _________________________
 - you cannot use the name of a keyword as a variable, method or class.
 
 ### static
-- static is a modifier used to define a class-wide variable or method. It is a globally accessible field.
-- A method marked static can only use other static variables or methods.
--  you can use a static member with the dot operator on the class WITHOUT instantiating the class first 
-  - [Example](img/static.png)
+- static member is shared class-wide, changing a static member values canges it for the entire class
+- shared across the entire program, and will always point to the same object in memory
+- instance member is associated with a single instance
+- Instance members are associated to an object that is saved in memory. We can manipulate data for an instance and it won't affect another instance.
+
 ### final
 - The keyword final is used to specify a class, method or variable as immutable
 
@@ -86,17 +87,14 @@ _________________________
     - A method marked final cannot be overridden. 
   - final classes
     - A class marked final cannot be extended.
-###### abstract
+
+
+### abstract
 - declares a method or class as incomplete or as a template.
 - abstract method has no body.
 - abstract class cannot be instantiated and should be extended.
--  if a child class extends an abstract class, it must override all inherited abstract methods to provide an implementation of its own .If you do not do this, the subclass must also be declared abstract 
+- if a child class extends an abstract class, it must override all inherited abstract methods to provide an implementation of its own .If you do not do this, the subclass must also be declared abstract 
 - If you declare at least one method abstract, then the class must be declared as abstract
 - If you declare a class as abstract, you do not need to specify any methods as abstract
 - You cannot instantiate a abstract class
-![Example](img/abstract.png)
-  - Animal class is abstract so it can only be inherited
-  - contains a concrete method, eat and an abstract one, move
-  - oth methods will be inherited; however, the abstract method guarantees that each concrete subclass will be forced to define implementation details for itself
-  - In the Dog class we have a method local to dogs, beg, and an overridden move method
-  - This allows us to instantiate a Dog object, and call its move behavior
+
