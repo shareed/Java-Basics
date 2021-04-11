@@ -1,8 +1,8 @@
 public class A {
-    	  //static member
+    	  //static/class member/variable
 	  public static int staticCount = 0;
 
-	  //instance member
+	  //instance member/variable
 	  public int instanceCount = 0;
 	  
 	  //no-arg constructor to update both values by one
