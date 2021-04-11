@@ -5,7 +5,9 @@
 - a special construct that acts as a contract 
 - written similar to classes except they use the keyword `interface` instead of class to declare an interface
 - its methods are `public abstract` (they don’t implement anything)
+    - Java 8 added ability to use static or default methods, that do not have to be implmented in the subclass
 - its variables are `public static final` (can not be changed once given a value)
+- are contractual, and you can always use them polymorphically as reference types to guarantee access to certain methods
 ________________________________
 
 ### Implementing Interfaces
