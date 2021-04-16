@@ -11,12 +11,17 @@
 
 
  2. What does the keyword final mean?
+    - specifies a class, method or variable as immutable
  3. What does the keyword static mean?
+    - specifies members that are shared class-wide 
  4. What is a interface?
  5. What is an object?
+    - an instance of a class in memory
  6. What is a Linked List?
  7. What is a reference type?
+    - stores the reference to an object in memory ???
  8. What is Inheritance with an example?
+    - gives access to the states and behaviors of one class to another similar to how a child 
  9. What is Encapsulation with and example?
  10. What is Abstraction with an example?
     - hiding details, only showing what something does and hiding how it does it
