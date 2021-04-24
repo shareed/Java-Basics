@@ -1,11 +1,13 @@
 # Java
 - programming language that is almost object oriented, becasue everything is an object except primitive variables
+
 [More....](Notes/JavaIntro.md)
 ____________________________
 
 
 ## How It Works
 The JDK compiles the source code, which turns it into byte code. The JVM, which is inside JRE, takes that byte code, runs it in the virtual environment and the Just In Time compiler turns the byte code into machine code.
+
 [More....](Notes/JavaIntro.md)
 ______________________________________
 
@@ -23,17 +25,23 @@ ______________________________________
 __________________________________________
 
 ## Packages
+- a collection of similar classes, interfaces and subclasses
 - like folders, they contain the .java files, like the classes and interfaces
+
+[More....](Notes/JavaIntro.md)
 ______________________________________
 
 ## Classes
 - A template or a blueprint for an object
+- a class describes the attributes and behaviors of an object
 - Fields store information about the object
 - Methods are actions the object can take
+
+[More....](Notes/JavaIntro.md)
 __________________________________________
 
 ## Scope
-- define the availability of a variable
+- **Variable Scope:** defines the availability of a variable
 - 4 scopes
     - Class
         - visiable to all objects of a class and the value is the same across entire class
@@ -43,15 +51,34 @@ __________________________________________
         - only visiable inside the method
     - Block
         - only visiable within curly braces
+
+[More....](Notes/Variables.md)
 _______________________________________________
 
 ## Variables
 - reserved memory locations to store values
+
+[More....](Notes/Variables.md)
 ______________________
 
 ## Methods
 - define the functionality/behavior of an object or class
+[More....](Notes/Methods.md)
 ____________________________________________________________
+
+## Method Overloading
+- creating more than one method with the same name
+    - must have differnt number and/or types of parameters and/or order of parameters
+[More....](Notes/Methods.md)
+____________________________________
+
+## Method Overriding
+- a child class can override a method inherited from its parent
+    - must define a method in the child class with the same signature as its parent
+    - should have the same name, number and type of parameters 
+
+[More....](Notes/Methods.md)
+_________________________________
 
 ## Abstract Methods
 - methods with no body 
@@ -59,6 +86,8 @@ ____________________________________________________________
 - can only be declared in a abstract class
 - guarantees a class will contain certain methods
 - class inheriting the current class(abstract class) must either override the abstract method or declare itself(the class) as abstract
+
+[More....](Notes/Methods.md)
 _____________________________________________
 
 ## Access Modifiers
@@ -67,26 +96,34 @@ _____________________________________________
 - **protected:** can be accessed anywhere in the same package and any subclasses, which can be outside the package
 - **private:** only the class itself can access
 - **default:** only access anywhere in same application
-___________________________________________________-
+___________________________________________________
 
 ## Objects
 - a instance of a class
 _______________________________
 
 ## Abstract Class
-- used to add structure to a class but not the implementation
-- cannot be instantiated eg. `new AbstractClass`
+- a class that cannot be instantiated `new AbstractClass`
+    - used to add structure to a class but not the implementation
     - must be extended 
+- Abstract classes can have instance variables that are not automatically public static final, but Interface variables are always `public static final`
+- Abstract method can have methods that are not public, interface methods are `public abstract`
+
+[More....](Notes/AbtractClasses.md)
 __________________________
 
 ## Interface
-- collection of abstract methods
-    - can also have default(declared with the default keyword) methods, which are public
+- an abstract entity that contains behaviors that a class must implement
+    - can have abstract and default(declared with the default keyword and are public) methods
     - variables/fields: must be public static final
 - classes implement interfaces
     - multiple interfaces can be implmented in one class
         - this acheives multiple inheritance
 - interfaces extend other interfaces
+- Interface variables are always `public static final` but, abstract classes can have instance variables that are not automatically public static final, but 
+- Interface methods are `public abstract` abstract classes can have methods that are not public
+
+[More....](Notes/Interface.md)
 ___________________________
 
 ## Constructors
@@ -99,6 +136,8 @@ ___________________________
     - if you do not do this the compiler will do it for you
 - don't break the superclass
     - if parent no args constructor is overidden then you should add arguments to the super call of child constructor
+
+    [More....](Notes/Constructors.md)
 ____________________________________________________
 
 ## Keywords
@@ -111,6 +150,8 @@ ____________________________________________________
     - System.exit(), will stop a finally block from running by crashing the application
 - Finalize
     - method on the Object class that the garbage collector calls immediately before the object is removed from memory.
+
+[More....](Notes/Keywords.md)
 __________________________
 
 ## OOP Pillars
@@ -133,7 +174,11 @@ __________________________
     - E.g. A Female can also be a sister or a mother etc...
 _________________________________
 
-## Collections
+## Collection Framework
+- a combination of classes and interfaces
+- used to store and manipulate the data in the form of objects
+- provides various classes such as ArrayList, Vector, Stack, and HashSet, etc. and interfaces such as List, Queue, Set, etc. for this purpose.
+- Collection framework implements various interfaces
 
 ## Lambdas
 
