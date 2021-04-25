@@ -11,12 +11,17 @@
 
 
  2. What does the keyword final mean?
+    - specifies a class, method or variable as immutable
  3. What does the keyword static mean?
+    - specifies members that are shared class-wide 
  4. What is a interface?
  5. What is an object?
+    - an instance of a class in memory
  6. What is a Linked List?
  7. What is a reference type?
+    - stores the reference to an object in memory ???
  8. What is Inheritance with an example?
+    - gives access to the states and behaviors of one class to another similar to how a child 
  9. What is Encapsulation with and example?
  10. What is Abstraction with an example?
     - hiding details, only showing what something does and hiding how it does it
@@ -30,5 +35,5 @@
     - the try block contains code that can potentially throw an exception
     - the catch block is used to catch any exceptions that may be thrown from code in the try block, if an exception is thrown it will execute any code within its block 
     - the finally block is used to execute code regardless of if an exception is thrown (even if a return statement is in the try block)
-
+13 Poly examples are method overloading and overiding
  ## SQL

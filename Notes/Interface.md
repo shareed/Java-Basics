@@ -1,9 +1,7 @@
 # Interface
-**Writing an interface is similar to writing a class. But a class describes the attributes and behaviors of an object. And an interface contains behaviors that a class implements**
+- a class describes the attributes and behaviors of an object, a interface contains behaviors that a class implements
 - an abstract entity that contains behaviors that a class must implement
 - guarantees certain behaviors(methods) in a subclass
-- a special construct that acts as a contract 
-- written similar to classes except they use the keyword `interface` instead of class to declare an interface
 - its methods are `public abstract` (they don’t implement anything)
     - Java 8 added ability to use static or default methods, that do not have to be implmented in the subclass
 - its variables are `public static final` (can not be changed once given a value)
@@ -77,7 +75,8 @@ _______________________________________________
 ________________________________________
 
 ### Inheriting Default Methods(Multiple Inheritance)
-**Since default methods are inherited and a class can implement multiple interfaces, they may arise a situation where a class inherits the same method from two interfaces (multiple inheritance).**
+**Since default methods are inherited and a class can implement multiple interfaces, they may arise a situation where a class inherits the same method from two interfaces (multiple inheritance).** 
+***These are for backwards compatibility and should be declared when absolutely necessary.***
 - you can override the method and can specify which default by using the keyword super: `InterfaceName.super.doWork();`
     - If I have two interfaces that have default methods with the same name - like a Domesticated interface and a Worker interface that both have default methods named doWork() – and my class SeeingEyeDog implements them both, now SeeingEyeDog has two different implementations for the same method
         - `Domesticated.super.doWork()` will use the default doWork() implementation from the Domesticated interface
@@ -91,13 +90,12 @@ ________________________________________
 
 ____________________________
 ## Summary
-- An interface is a reference type in Java
-- a collection of abstract methods
-- A class implements an interface, thereby inheriting the abstract methods of the interface
-## References
-- [Java Revature: ](https://app.revature.com/core/resources/revContents/content/java/java_interfaces.htm)
-- []()
-- []()
-- []()
-- []()
-- []()
+- A Interface is a reference type in Java
+- A Interface is a collection of abstract methods
+   - can also have concrete default methods
+- A class can implement one or multiple interfaces
+   - inheriting the abstract methods of the interface
+- A interface can extend other interfaces
+- Interfaces do not have constructors
+- fields: must be public static final
+- methods: abstract and public*
