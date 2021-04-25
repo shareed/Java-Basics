@@ -1,3 +1,4 @@
+## Collection 
 
 ## Collection
 - an object that contains and manipulates a group of objects
@@ -12,4 +13,3 @@ _____________________________
 ### Collections(utility class)
 - Collections (notice the 's') is a utility class that provides several static methods useful when working with
 a Collection object
-- There are several different types of collections, and they are mainly distinguished by two characteristics:how they order elements, and whether those elements are sorted

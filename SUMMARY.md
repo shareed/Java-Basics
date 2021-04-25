@@ -177,11 +177,62 @@ _________________________________
 ## Collection Framework
 - a combination of classes and interfaces
 - used to store and manipulate the data in the form of objects
-- provides various classes such as ArrayList, Vector, Stack, and HashSet, etc. and interfaces such as List, Queue, Set, etc. for this purpose.
-- Collection framework implements various interfaces
+- Collection framework implements various interfaces(e.g Collection and Map)
+
+[More....](Notes/CollectionFW/CollectionFW.md)
+____________________
+
+## Collection
+- an object that contains and manipulates a group of objects(e.g List, Oueue etc...)
+- mainly distinguished by two characteristics:how they order elements, and whether those elements are sorted
+
+[More....](Notes/CollectionFW/Collections.md)
+____________________
+
+## Collections
+- a utility class that provides serveral static methods that are useful when working with a collection object
+
+[More....](Notes/CollectionFW/Collections.md)
+___________________________________
+
+## Wrapper Class
+- let you treat primitives as objects
+    - e.g int: Integer
+- needed to use primitives with collections
+
+[More....](Notes/WrapperClass.md)
+__________________
+
+## Boxing
+- converting primitives into a wrapper class variants
+- autoboxing feature does this for us(implicity)
+- auto-unboxing feature does the opposite
+- all this happens under the hood
+
+[More....](Notes/WrapperClass.md)
+______________________________
+
+## Compareable and Comparator
+- interfaces used to sort elements
+- **Compareable:**
+    - defines the natural ordering for a class
+    - allow us to sort a collection on the basis of a single element using a single ordering sequence
+    - class must implement Comparable in order to be sorted by the compareTo() method, which compares this object to a specified object
+- **Comparator:**
+    - defines total ordering on some collection of objects
+    - allow us to sort a collection on the basis of a single element using multiple sorting sequences
+    - class doesn’t have to implement Comparator to use the compare() method which compares this object to a specified object
+
+[More....](Notes/Compara.md)
+______________________
 
 ## Lambdas
+- a short block of code which takes in parameters and returns a value
+- allow you create single use, anonymous methods, that can be passed as parameters
+- can be implemented right in the body of a method
+____________________________
 
+## Design Patterns
 ## Singleton
 ## Factories
 ## Wrapper Classes
