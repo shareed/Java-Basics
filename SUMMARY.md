@@ -230,13 +230,65 @@ ______________________
 - a short block of code which takes in parameters and returns a value
 - allow you create single use, anonymous methods, that can be passed as parameters
 - can be implemented right in the body of a method
+
+[More....](Notes/Lambdas.md)
 ____________________________
 
 ## Design Patterns
-## Singleton
-## Factories
-## Wrapper Classes
+- software template, to base your design off of
+- help slove recurring problems that arise when developing program
+- **Some popular design patterns:**
+    - Singletons
+        - a class that can have only one object(instance) at a time
+        - ensures that only one object can ever be created
+    - Factorries
+        - a class that lets us creates objects without exposing the creation logic to the client
+        - use for separation of concerns
+    - Decorator
+    - Prototype
+    - Publisher-Subscriber
+
+[More....](Notes/DesignPatterns.md)
+_________________________
+
+
 ## Strings
+- strings of characters
+- strings are objects because they are constructed using the String class
+- both the String class and the value stored inside a String object are final(immutable)
+    - you cannot create a String subclasses
+    - you can create a new String in memory changing the original Strings value in some way, then changing the assignment of a String variable to point to the new String
+- **Two ways to create strings:**
+    - **String Literals:** `String shannon = "Shannon";`
+        - are stored in a particular place of the heap called the String pool
+        - one String object will be created for each unique String literal
+    - **Using the nwe Keyword:** `String shannon = new String("Shannon");`
+        - are stored in the general heap
+- override the `.equals()` method from the object class to check the value of the characters contained in the String
+- `==` should not be used with Strings
+
+[More....](Notes/Strings.md)
+________________________________
+
+## StringBuffer and StringBuilder
+- classes similar to the String class
+- allow the text value they contain to be changed at will
+- provide several utility methods for manipulating their contents in different ways
+- **String Buffer**
+    - a wrapper for a mutable string that is synchronized or thread safe
+- **StringBuilder**
+- a wrapper for a mutable string, but it is not thread-safe
+
+[More....](Notes/Strings.md)
+
+____________________________________
+
+## equals() method
+- a method that compares object's values 
+- the string class overrides this functinality to compare the value of the characters contained in the String
+## ==
+- an operator that compares memory addresses
+## Annotations
 ## Scanner
 ## Casting ???
 ## Arrays
