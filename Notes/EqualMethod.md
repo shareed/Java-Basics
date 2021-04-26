@@ -13,3 +13,7 @@
 - remember to override hashCode if you override equals so as not to "break the contract". As per the API, the result returned from the hashCode() method for two objects must be the same if their equals methods show that they are equivalent. The converse is not necessarily true.
 __________________
 `System.out.println(System.identityHashCode(variableName));`
+
+- equals method is on the object class
+- `.equals` method by default uses the `==` operator under the hood, which compares the memory addresses 
+    - if you want to compare values you will have to override the equals method in your class

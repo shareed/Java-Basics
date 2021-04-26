@@ -83,7 +83,14 @@ g. ThisIsMyClass.
 
 __________________________
 
-Garbage Collection:
+## Scanner
+- class that allows us to take a stream of inputs during runtime
+- primarily used with the console to provide inputs from there
+- located in the java.util which is a JRE library
+- has various methods for pulling particular types of information. This includes getting Strings, ints, doubles, etc
+_____________________________
 
-- Java’s memory management is abstracted away from us. It is responsible for processes that run in the background to manage memory. It will remove objects from memory that no longer have any reference variable pointing to them. We call this garbage collection.
+## Garbage Collection:
+**Java’s memory management is abstracted away from us. It is responsible for processes that run in the background to manage memory. It will remove objects from memory that no longer have any reference variable pointing to them. We call this garbage collection**
 - You can NOT force the garbage collector. You can suggest that the GC runs with System.gc() but there is no guarantee that it will.
+________________________

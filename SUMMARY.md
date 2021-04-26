@@ -40,6 +40,16 @@ ______________________________________
 [More....](Notes/JavaIntro.md)
 __________________________________________
 
+## Contructor
+- a block of code that is executed only once, when a class is instantiated
+- **super:**  will call the parent constructor
+- **this:** will call another constructor in the class
+    - **constuctor chaining:**  is using this to avoid repeating code
+
+
+[More....](Notes/Constructors.md)
+____________________________
+
 ## Scope
 - **Variable Scope:** defines the availability of a variable
 - 4 scopes
@@ -95,11 +105,15 @@ _____________________________________________
 - **public:** can be accessed anywhere in application
 - **protected:** can be accessed anywhere in the same package and any subclasses, which can be outside the package
 - **private:** only the class itself can access
-- **default:** only access anywhere in same application
+- **default:** only access anywhere in same package
+
+[More....](Notes/AccessModifiers.md)
 ___________________________________________________
 
 ## Objects
 - a instance of a class
+
+[More....](Notes/JavaIntro.md)
 _______________________________
 
 ## Abstract Class
@@ -137,7 +151,7 @@ ___________________________
 - don't break the superclass
     - if parent no args constructor is overidden then you should add arguments to the super call of child constructor
 
-    [More....](Notes/Constructors.md)
+[More....](Notes/Constructors.md)
 ____________________________________________________
 
 ## Keywords
@@ -157,10 +171,11 @@ __________________________
 ## OOP Pillars
 - **Abstraction:**
     - Hiding implementation details from the user and show only functionality
-    - E.g. When a pilot is landing an airplane he does not need to know how the landing gear works he just needs to know what controlls he need to use in the cockpit to land the plane.
+    - E.g. When a pilot is landing an airplane he does not need to know how the landing gear works he just needs to know what controlls he need to use in the cockpit to land the plane
+    - E.g. Can use a abstarct class that has abstarct methods to force the child class to provide the implementation of the methods
 - **Encapsulation:**
     - Wrapping data and code into a single unit and protecting it form outside manipulation
-    - we use getters and setters to access and change 
+    - we use getters and setters to access and change data
 - **Inheritance:**
     - when one class takes on the properties of another class
     - E.g A Content Class has title and description fields
@@ -172,25 +187,25 @@ __________________________
     - method overloading
     - method override
     - E.g. A Female can also be a sister or a mother etc...
+
+[More....](Notes/OOPPillars.md)
 _________________________________
 
 ## Collection Framework
-- a combination of classes and interfaces
-- used to store and manipulate the data in the form of objects
-- Collection framework implements various interfaces(e.g Collection and Map)
+***A kind of architecture that is a combination of classes and interfaces which are used to store and manipulate the data in the form of objects***
 
 [More....](Notes/CollectionFW/CollectionFW.md)
 ____________________
 
 ## Collection
-- an object that contains and manipulates a group of objects(e.g List, Oueue etc...)
-- mainly distinguished by two characteristics:how they order elements, and whether those elements are sorted
+***An object that contains and manipulates a group of objects, like a list or a Set***
+
 
 [More....](Notes/CollectionFW/Collections.md)
 ____________________
 
 ## Collections
-- a utility class that provides serveral static methods that are useful when working with a collection object
+***A utility class that provides serveral static methods that are useful when working with a collection object***
 
 [More....](Notes/CollectionFW/Collections.md)
 ___________________________________
@@ -284,15 +299,176 @@ ________________________________
 ____________________________________
 
 ## equals() method
-- a method that compares object's values 
+***A method that compares object's values***
 - the string class overrides this functinality to compare the value of the characters contained in the String
+- If a class does not override the equals method, then by default it uses equals(Object o) method of the closest parent class that has overridden this method
+
+[More....](Notes/EqualMethod.md)
+______________________________
+
 ## ==
-- an operator that compares memory addresses
+***An operator that compares memory addresses***
+
+[More....](Notes/EqualMethod.md)
+____________________
+
 ## Annotations
+***A tag that represents and provide metadata(data about data) to the compiler or JVM***
+- can be used on classes, methods, interfaces or other
+- often used by libraries that provide additional functionality
+
+[More....](Notes/Annotations.md)
+________________________
+
 ## Scanner
+***A class, that is located in the java.util, that allow us to take a stream of inputs during runtime***
+
+[More....](Notes/JavaIntro.md)
+______________________________
+
 ## Casting ???
+***Changing from one variable type to another***
+- **Upcasting:** is taking a subclass and putting it into a superclass declared variable
+- **Downcasting:** is taking a superclass and putting it into a child class variable
+
+[More....](Notes/Casting.md)
+_________________________________
+
 ## Arrays
+***Are data structure that sequentially store the same type of data in memory***
+- can change the values in an array as long as they are of the same type
+- Create an empty array of the length your need
+    - `int[] intArray = new int[3];`
+- Assign values immediately
+    - `int[] intArray2 = {8, 9, 10};`
+
+[More....](Notes/Arrays.md)
+______________________________________
+
 ## Errors ???
+- problems that the application can not reasonably be expected to recover from itself
+- **OutOfMemoryError:** no more memory available for Java to use
+- **StackOverflowError:** no more room on the stack for a new method call
+
+________________________________
+
 ## Exceptions
+***An event, that occurs during the execution of a program, that disrupts the normal flow of the program***
+    - checked exceptions are anticipated as possible and so the compiler will require you to handle them in some manner before it will compile
+    - unchecked exceptions are exception that the compiler does not require you to preemptively handle them
+_______________________________
+
 ## Garbage Collection
+***Removing objects from memory that no longer have any reference variable pointing to them***
+- this process runs in the background and you can not force it, it does it when it wants to
+
+[More....](Notes/JavaIntro.md)
+__________________________
+
 ## Threads ???
+***Path that the application follows when executing a program***
+***Alow Java application to be more efficient by creating concurrently running execution flows***
+- **Ways to create a thread:**
+    - **First Way:** A class can extend the Thread class and override the “run()” method, to create a thread
+    - **Second Way:** A class can implement the Runnabe interface also and override the “run()” method, to create a thread
+- **Concurrency issues:** Issues that arise becuase threads run independently and there is no way to ensure the order in which threads will run in comparison to each other
+    - **Deadlock:** when two threads are competing for the same set of resources and neither is willing to give up the part of the set that they control, causing the application to stall out and run indefinitely
+        - can usually be resolved by giving thread priority
+        - can also use `isAlive()` it will pause a thread giving up it’s resources to the other thread that needs them
+    - **Starvation:** when threads are competing because one thread has all resources another thread needs
+        - the thread without access to resources is stalled for a period of time
+        - can be mitigated by having threads release resources when they are not actively using
+    - **Synchronization:** a non-access modifier `synchronized` will “lock-down” a method or class/object to a single thread having access to it at a time
+______________________________________
+
+### ArrayList vs LinkedList
+- **Storage:**
+    - ArrayList uses a dynamic array to store its elements
+    - LinkedList uses Doubly Linked List to store its elements
+- **Speed:**
+    - ArrayList are slow as array manipulation is slower
+    - LinkedList faster because it is node based
+- **Implementation:**
+    - ArrayList implement List
+    - LinkedList implement List and Queues
+- **Access:**
+    - ArrayList faster at storing and accessing data but slower at manipulationg data
+    - LinkedList faster at manipulating data
+
+
+# Things to Review
+- Lambdas
+- Collections
+- Threads
+- Stacks
+- Factories
+
+
+____________________________
+
+## Classes
+- bleuprint for creating objects
+_____________________
+
+
+## Interface 
+A **interface** is a reference type that uses abstract methods to specifiy what a class must do but not how to do it
+____________________________
+
+## Packages
+
+- A **package** is a collection of similar classes, interfaces and subclasses
+_______________________
+
+## Abstract Classes
+- A abstract class is one that must be inherited from another class, and cannot be used to create objects
+    - can have both abstract and regular methods
+__________________________
+
+## Exceptions
+- event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions
+_______________________________
+-  An **exception** is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. A Java exception is an object that wraps an error event that occurred within a method
+    - Catergories:
+        - Checked Exceptions
+            - compiler enforces that you handle them explicitly
+            - Methods that generate checked exceptions must declare that they throw them. 
+            - Methods that invoke other methods that throw checked exceptions must either handle them or let them propagate by declaring that they throw them. 
+        - Unchecked Exceptions
+            - Errors and RuntimeExceptions are unchecked — the compiler does not enforce (check) that you handle them explicitly. 
+            - Methods do not have to declare that they throw them (in the method signatures). 
+            - It is assumed that the application cannot do anything to recover from these exceptions (at runtime). 
+        - Errors
+            - are not exceptions at all, but problems that arise beyond the control of the user or the programmer. Errors are typically ignored in your code because you can rarely do anything about an error
+_______________________________
+
+
+
+
+
+- Arrays are always of fixed size, i.e., a user can not increase or decrease the length of the array according to their requirement or at runtime, but In Collection, size can be changed dynamically as per need.
+- Arrays can only store homogeneous or similar type objects, but in Collection, heterogeneous objects can be stored.
+- Arrays cannot provide the ?ready-made? methods for user requirements as sorting, searching, etc. but Collection includes readymade methods to use.
+
+### Questions I got wrong	
+1. **How many String objects have been created at the end of this code sequence?** ***Answer 5***
+    ```
+        String a = "Hello";
+        String b = "World";
+        a = a + b;
+        a = new String("hello");// if this was a uppercase "H" then the answer would be 4
+        String c = "World";
+        String d = "Hello";
+
+    ```
+
+2. **Which of the following statements are true about Java lambda expressions?**
+***Lambda expressions are used primarily to define inline implementation of a functional interface.***
+***Lambda expressions fulfills the need for anonymous classes in Java.***
+
+3. How many objects are created with the following code? Answer 2
+    ```
+        String a = new String(); //creates a string object
+        String b = a; //does not create a new object
+        a = "Hello";//creates a string object
+    ```
