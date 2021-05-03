@@ -32,6 +32,7 @@
 - [List Interface](Notes/CollectionFW/List.md)
 - [Set Interface](Notes/CollectionFW/Set.md)
 - [Queue Interface](Notes/CollectionFW/Queue.md)
+- [Maven](Java/Maven/README.md)
 <!-- - []()
 - []()
 - []()
